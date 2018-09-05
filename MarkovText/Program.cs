@@ -8,7 +8,7 @@ namespace MarkovText
 {
     class Program
     {
-        static void Main(string[] args)f
+        static void Main(string[] args)
         {
 
         }
