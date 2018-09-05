@@ -34,7 +34,7 @@ namespace MarkovText
             }
 
 
-    }
+        }
 
         private void AddFirstCharacter()
         {
@@ -51,3 +51,4 @@ namespace MarkovText
             throw new NotImplementedException();
         }
     }
+}
