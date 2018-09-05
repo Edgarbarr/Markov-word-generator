@@ -29,7 +29,7 @@ namespace MarkovText
             //for (var i = 0; i < lines.Length;++i)
            {
                 // Use a tab to indent each line of the file.
-               Console.WriteLine("\t" + lines[i]);
+             //  Console.WriteLine("\t" + lines[i]);
           }
         }
         static string Filepath()
