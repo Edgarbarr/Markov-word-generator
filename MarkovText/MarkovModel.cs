@@ -8,6 +8,18 @@ namespace MarkovText
 {
     class MarkovModel
     {
+        FirstCharacter[] firstCharacter = new FirstCharacter[26];
+        MiddleCharacter[] middleCharacters = new MiddleCharacter[26];
+        FinalCharacter[] finalCharacters = new FinalCharacter[26];
+
+        public void AddWords (string[]words)
+        {
+            foreach(var word in words)
+            {
+                this.AddWord(word)
+           
+            }
+        }
         struct FirstCharacter
         {
 
@@ -22,9 +34,7 @@ namespace MarkovText
         }
         public void AddWord(string word)
         {
-            FirstCharacter[] firstCharacter = new FirstCharacter[26];
-            MiddleCharacter[] middleCharacters = new MiddleCharacter[26];
-            FinalCharacter[] finalCharacters = new FinalCharacter[26];
+         
 
             if (word.Length > 3)
             {

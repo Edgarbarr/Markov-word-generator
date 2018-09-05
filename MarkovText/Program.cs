@@ -9,19 +9,35 @@ namespace MarkovText
     class Program
     {
         static void Main(string[] args)
+            
         {
-            string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName (Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())));
+            var filepath = Filepath();
 
-            string filepath = $"{wanted_path}\\words_alpha.txt";
+            string[] lines = File.ReadAllLines(filepath);
 
-            Console.WriteLine(wanted_path+"\\word_alpha.txt");
-           string[] lines = File.ReadAllLines(filepath);
+            //string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName (Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())));
 
-            for (var i = 0; i < 10;++i)
+           // string filepath = $"{wanted_path}\\words_alpha.txt";
+
+           // return filepath;
+
+           
+           
+
+            var model = new MarkovModel();
+
+            //for (var i = 0; i < lines.Length;++i)
            {
                 // Use a tab to indent each line of the file.
                Console.WriteLine("\t" + lines[i]);
           }
+        }
+        static string Filepath()
+        {
+            string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName (Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())));
+
+             string filepath = $"{wanted_path}\\words_alpha.txt";
+            return filepath;
         }
     }
 }
